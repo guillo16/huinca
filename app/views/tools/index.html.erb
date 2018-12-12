@@ -8,7 +8,7 @@
           <div class="caption">
             <h3><%= link_to tool.name, tool_path(tool) %></h3>
             <p><%= tool.category.name %></p>
-            <p>$$$</p>
+            <p>Amount: <%= humanized_money_with_symbol(tool.price) %></p>
           </div>
         </div>
       </div>
