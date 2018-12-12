@@ -15,6 +15,7 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'money-rails'
 gem 'sassc-rails'
 gem 'simple_form'
+gem 'stripe'
 gem 'uglifier'
 gem 'webpacker'
 
