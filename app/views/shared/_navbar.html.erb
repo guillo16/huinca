@@ -10,9 +10,37 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+        <div class="dropdown">
+          <button class="dropbtn">Productos <i class="fas fa-angle-down"></i></button>
+          <div class="dropdown-content">
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Marcas</button>
+          <div class="dropdown-content">
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Categoria</button>
+          <div class="dropdown-content">
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+            <%= link_to 'productos', tools_path %>
+          </div>
+        </div>
+
+
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -39,6 +67,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
+
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
