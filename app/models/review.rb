@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
   belongs_to :tool
-  validates :description, lenght: { minimum: 20 }
+  validates :description, length: { minimum: 20 }
 end

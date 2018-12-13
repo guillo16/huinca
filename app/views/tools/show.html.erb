@@ -18,12 +18,15 @@
     </div>
   </div>
   <div id="reviews">
-  <% if @restaurant.reviews.blank? %>
-    Be the first to leave a review for <%= @restaurant.name %>
+  <% if @tool.reviews.blank? %>
+    Be the first to leave a review for <%= @tool.name %>
   <% else %>
-    <% @restaurant.reviews.each do |review| %>
+    <% @tool.reviews.each do |review| %>
       <%= render 'reviews/show', review: review %>
     <% end %>
   <% end %>
 </div>
+
+
 </div>
+<%= render 'reviews/form', tool: @tool, review: @review %>
