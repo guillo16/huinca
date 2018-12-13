@@ -17,4 +17,16 @@
 <% end %>
     </div>
   </div>
+  <div id="reviews">
+  <% if @tool.reviews.blank? %>
+    Be the first to leave a review for <%= @tool.name %>
+  <% else %>
+    <% @tool.reviews.each do |review| %>
+      <%= render 'reviews/show', review: review %>
+    <% end %>
+  <% end %>
 </div>
+
+
+</div>
+<%= render 'reviews/form', tool: @tool, review: @review %>
