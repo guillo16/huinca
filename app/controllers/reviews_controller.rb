@@ -4,15 +4,21 @@ class ReviewsController < ApplicationController
      @review = Review.new(review_params)
      @review.tool = @tool
      if @review.save
-       redirect_to tool_path(@tool)
+      respond_to do |format|
+        format.html { redirect_to tool_path(@tool) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
      else
-       render 'tools/show'
-     end
-   end
+       respond_to do |format|
+        format.html { render 'tools/show' }
+        format.js  # <-- idem
+    end
+    end
+  end
 
   private
 
   def review_params
-    params.require(:review).permit(:description)
+    params.require(:review).permit(:description, :rating)
   end
 end
