@@ -7,6 +7,6 @@
   <li>Item: <%= @order.tool_sku %></li>
   <li>Status: <%= @order.state %></li>
   <li>Amount: <%= humanized_money_with_symbol(@order.amount) %></li>
-  <%= link_to 'back to home', root_path, class: 'btn btn-primary' %>
+  <%= link_to 'back to home', tools_path, class: 'btn btn-primary' %>
 <ul>
 </div>
