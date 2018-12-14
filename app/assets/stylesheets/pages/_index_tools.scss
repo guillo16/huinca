@@ -17,20 +17,33 @@ display: flex;
   position: relative;
   background-size: cover !important;
   background-position: center;
-  width: 300px;
   height: 200px;
   padding: 0px;
-  border: solid;
-  margin-bottom: 40px;
+
+
 
 }
 
 .caption-tool {
-  border: solid;
+  margin-left: 5px;
+  border-bottom: 1px solid;
+  border-color: grey;
 }
 
 .tool-card {
- border: solid;
- border-radius: 4px;
- margin-bottom: 30px;
+  background-size: cover !important;
+  margin-bottom: 50px;
+  border: 1px solid ;
+  border-color: #F4F4F4;
+
+&:hover {
+  border: 1px solid;
+}
+
+}
+
+
+.caption-b {
+margin-left: 5px;
+margin-top: 30px;
 }
