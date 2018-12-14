@@ -12,3 +12,38 @@ display: flex;
   background-color: #fafafa;
 }
 
+
+.thumbnail-tool {
+  position: relative;
+  background-size: cover !important;
+  background-position: center;
+  height: 200px;
+  padding: 0px;
+
+
+
+}
+
+.caption-tool {
+  margin-left: 5px;
+  border-bottom: 1px solid;
+  border-color: grey;
+}
+
+.tool-card {
+  background-size: cover !important;
+  margin-bottom: 50px;
+  border: 1px solid ;
+  border-color: #F4F4F4;
+
+&:hover {
+  border: 1px solid;
+}
+
+}
+
+
+.caption-b {
+margin-left: 5px;
+margin-top: 30px;
+}

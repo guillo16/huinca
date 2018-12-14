@@ -1,37 +1,46 @@
 <div class="main-container">
   <div id="list">
 
-<h2>holaaaa</h2>
-<h2>chaiiii</h2>
-<h2>holaaaa</h2>
-<h2>chaiiii</h2>
-<h2>holaaaa</h2>
-<h2>chaiiii</h2>
-<h2>holaaaa</h2>
-<li><%= link_to "Beginner", tools_path(min_price_cents: 1000, max_price_cents: 2000) %> </li>
-<li><%= link_to "40-50", tools_path(min_price_cents: 4000, max_price_cents: 5000) %> </li>
-<h5> <%= link_to tools_path(name: "martillo") do %>
-        martillos <% end %></h5>
-<h5> <%= link_to tools_path(name: "taladro") do %>
-        <i class="fas fa-music"></i> Songs <% end %></h5>
+    <h4>Marcas</h4>
+      <h5> <%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
+      <h5> <%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
+      <h5> <%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
+      <h5> <%= link_to tools_path(brand: "Tersuave") do %>Tersuave<% end %></h5>
+    <h4>Categorias</h4>
+      <h5> <%= link_to tools_path(name: "martillo") do %>Martillos<% end %></h5>
+      <h5> <%= link_to tools_path(name: "taladro") do %>Taladros<% end %></h5>
+      <h5> <%= link_to tools_path(name: "Amoladora") do %>Amoladora<% end %></h5>
+      <h5> <%= link_to tools_path(name: "Grupo-electrogeno") do %>Grupo-electrogeno<% end %></h5>
+    <h4>Novedades</h4>
+
+    <h4>Precio</h4>
+      <h5><%= link_to "$ 10--20", tools_path(min_price_cents: 1000, max_price_cents: 2000) %> </h5>
+      <h5><%= link_to "40-50", tools_path(min_price_cents: 4000, max_price_cents: 5000) %> </h5>
+      <h5><%= link_to "200-800", tools_path(min_price_cents: 20000, max_price_cents: 50000) %></h5>
   </div>
+
 
 
   <div class="container">
     <div class="row">
       <h1>Tools</h1>
       <% @tools.each do |tool| %>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <%= link_to image_tag(tool.photo_url), tool_path(tool) %>
-            <div class="caption">
-              <h3><%= link_to tool.name, tool_path(tool) %></h3>
-              <p><%= tool.category.name %></p>
-              <p>Amount: <%= humanized_money_with_symbol(tool.price) %></p>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+           <%= link_to tool_path(tool) do %>
+            <div class="tool-card">
+              <div class="thumbnail-tool" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url( '<%= tool.photo_url %> ')">
+              </div>
+              <div class="caption-tool">
+                <h3><%= link_to tool.name, tool_path(tool) %></h3>
+                </div>
+                <div class="caption-b">
+                <p><%= tool.category.name %></p>
+                <p>Amount: <%= humanized_money_with_symbol(tool.price) %></p>
+              </div>
             </div>
+            <% end %>
           </div>
-        </div>
-      <% end %>
+          <% end %>
     </div>
   </div>
 </div>
