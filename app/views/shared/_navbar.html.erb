@@ -11,33 +11,31 @@
 
       <!-- Links when logged in -->
         <div class="dropdown">
-          <button class="dropbtn">Productos </button>
+          <button class="dropbtn">Categorias</button>
           <div class="dropdown-content">
             <%= link_to tools_path(name: "martillo") do %>
         Martillos <% end %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
+            <%= link_to tools_path(name: "Martillos") do %>Martillos<% end %>
+            <%= link_to tools_path(name: "taladro") do %>Taladros<% end %>
+            <%= link_to tools_path(name: "Amoladora") do %>Amoladora<% end %>
+            <%= link_to tools_path(name: "Grupo-electrogeno") do %>Grupo-electrogeno<% end %>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn">Marcas <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
+            <h5> <%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
+            <h5> <%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
+            <h5> <%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
+            <h5> <%= link_to tools_path(brand: "Tersuave") do %>Tersuave<% end %></h5>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">Categoria <i class="fas fa-angle-down"></i></button>
+          <button class="dropbtn">Precio <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
+            <%= link_to "$ 10--20", tools_path(min_price_cents: 1000, max_price_cents: 2000) %>
+            <%= link_to "40-50", tools_path(min_price_cents: 4000, max_price_cents: 5000) %>
+            <%= link_to "200-800", tools_path(min_price_cents: 20000, max_price_cents: 50000) %>
           </div>
         </div>
         <div class="dropdown">

@@ -20,7 +20,7 @@ Tool.create!(sku: 'atornillador-dewalt', name:'atornillador', category: dewalt, 
 Tool.create!(sku: 'taladro-stanley', name:'martillo', category: stanley, price: 200, photo_url: 'https://http2.mlstatic.com/martillo-de-fibra-de-vidrio-stanley-51-071-profesional-D_NQ_NP_753432-MLA28987407532_122018-F.webp')
 Tool.create!(sku: 'tornillo-stanley', name:'martillo', category: stanley, price: 300, photo_url: 'https://http2.mlstatic.com/martillo-de-fibra-de-vidrio-stanley-51-071-profesional-D_NQ_NP_753432-MLA28987407532_122018-F.webp')
 Tool.create!(sku: 'cerrucho-stanley', name:'martillo', category: stanley, price: 400, photo_url: 'https://http2.mlstatic.com/martillo-de-fibra-de-vidrio-stanley-51-071-profesional-D_NQ_NP_753432-MLA28987407532_122018-F.webp')
-Tool.create!(sku: 'algo-stanley', name:'martillo', category: stanley, price: 10, photo_url: 'https://http2.mlstatic.com/martillo-de-fibra-de-vidrio-stanley-51-071-profesional-D_NQ_NP_753432-MLA28987407532_122018-F.webp')
+Tool.create!(sku: 'algo-stanley', name:'martillo', category: stanley, price: 10, photo_url: 'https://static.stihl.com/upload/produkte/images/gruppen/middle/bb8ba810ad8d4abe8f5bf92923a22f40.jpg')
 
 puts 'finished.'
 
