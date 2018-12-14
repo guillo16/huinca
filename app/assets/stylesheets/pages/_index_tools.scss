@@ -1,0 +1,14 @@
+.main-container {
+display: flex;
+}
+
+
+#list {
+ flex: 0 0 200px;
+  height: 100%;
+  position: sticky !important;
+  top: 0 !important;
+  border: solid;
+  background-color: #fafafa;
+}
+
