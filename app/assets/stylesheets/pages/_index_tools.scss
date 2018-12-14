@@ -13,3 +13,24 @@ display: flex;
 }
 
 
+.thumbnail-tool {
+  position: relative;
+  background-size: cover !important;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  padding: 0px;
+  border: solid;
+  margin-bottom: 40px;
+
+}
+
+.caption-tool {
+  border: solid;
+}
+
+.tool-card {
+ border: solid;
+ border-radius: 4px;
+ margin-bottom: 30px;
+}
