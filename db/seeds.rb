@@ -21,7 +21,10 @@ Tool.create!(sku: 'taladro-stanley', name:'martillo', category: stanley, price: 
 Tool.create!(sku: 'tornillo-stanley', name:'martillo', category: stanley, price: 300, photo_url: 'https://http2.mlstatic.com/martillo-de-fibra-de-vidrio-stanley-51-071-profesional-D_NQ_NP_753432-MLA28987407532_122018-F.webp')
 Tool.create!(sku: 'cerrucho-stanley', name:'martillo', category: stanley, price: 400, photo_url: 'https://www.bosch-professional.com/binary/ocsmedia/optimized/1434x828/o64795v54_GSR18-2-L1-dyn.png')
 Tool.create!(sku: 'algo-stanley', name:'martillo', category: stanley, price: 10, photo_url: 'https://static.stihl.com/upload/produkte/images/gruppen/middle/bb8ba810ad8d4abe8f5bf92923a22f40.jpg')
-Tool.create!(sku: 'grs-180', name:'martillo', category: bosch, price: 1040, photo_url: 'https://www.bosch-professional.com/binary/ocsmedia/optimized/1434x828/o265586v54_lv-128937-12-GSR180-LI_dyn.png')
+Tool.create!(sku: 'grs-180', name:'martillo', category: bosch, price: 1040, photo_url: 'https://www.bosch-professional.com/binary/ocsmedia/optimized/767x767/o60838v186_BOSCH_GBM6_GBM10_Anwendungen-065762.jpg')
+Tool.create!(sku: 'fs-100', name:'martillo', category: bosch, price: 1040, photo_url: 'https://static.stihl.com/upload/produkte/images/gruppen/middle/14f238c5216a467aa04246c42cc89b6e.jpg')
+Tool.create!(sku: 'gks-190', name:'martillo', category: bosch, price: 1040, photo_url: 'https://www.bosch-professional.com/binary/ocsmedia/optimized/767x767/o48684v186_hugks122.jpg')
+Tool.create!(sku: 'gsa-1100', name:'martillo', category: bosch, price: 1040, photo_url: 'https://www.bosch-professional.com/binary/ocsmedia/optimized/530x530/o46909v54_GSA-RS7_Dynamik.png')
 
 puts 'finished.'
 
