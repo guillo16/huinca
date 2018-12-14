@@ -13,7 +13,8 @@
         <div class="dropdown">
           <button class="dropbtn">Productos </button>
           <div class="dropdown-content">
-            <%= link_to 'productos', tools_path %>
+            <%= link_to tools_path(name: "martillo") do %>
+        Martillos <% end %>
             <%= link_to 'productos', tools_path %>
             <%= link_to 'productos', tools_path %>
             <%= link_to 'productos', tools_path %>
