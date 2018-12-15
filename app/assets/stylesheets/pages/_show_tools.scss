@@ -1,4 +1,5 @@
 
+
 #reviews {
   text-align: left;
   font-size: 16px;
@@ -6,8 +7,11 @@
   p {
     border-bottom: 2px solid;
     padding-bottom: 6px;
-
-  }
+ }
+ h6 {
+  border: 2px solid;
+  padding: 2px;
+ }
 }
 
 .content {
