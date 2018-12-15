@@ -8,25 +8,29 @@
     <div class="col-sm-12 col-md-6">
       <%= image_tag(@tool.photo_url, width: '100%') %>
     </div>
-    <div class="col-sm-12 col-md-6">
-      <p>Some awesome description of our amazing tool.</p>
-      <p>Amount: <%= humanized_money_with_symbol(@tool.price) %></p>
-    <%= form_tag orders_path do %>
-  <%= hidden_field_tag 'tool_id', @tool.id %>
-  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-<% end %>
+        <div class="col-sm-12 col-md-6">
+          <div class="content">
+            <p>Some awesome description of our amazing tool</p>
+            <p>Amount: <%= humanized_money_with_symbol(@tool.price) %></p>
+            <%= form_tag orders_path do %>
+            <%= hidden_field_tag 'tool_id', @tool.id %>
+            <%= submit_tag 'Comprar', class: 'btn' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+    <div id="reviews">
+        <h4> Deja tu comentario:</h4>
+        <% @tool.reviews.each do |review| %>
+          <%= render 'reviews/show', review: review %>
+      <% end %>
     </div>
   </div>
-  <div id="reviews">
-  <% if @tool.reviews.blank? %>
-    Be the first to leave a review for <%= @tool.name %>
-  <% else %>
-    <% @tool.reviews.each do |review| %>
-      <%= render 'reviews/show', review: review %>
-    <% end %>
-  <% end %>
-</div>
+  </div>
 
 
-</div>
+
 <%= render 'reviews/form', tool: @tool, review: @review %>
+
+</div>
+
