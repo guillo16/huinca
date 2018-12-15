@@ -1,6 +1,12 @@
+<div class="container">
+  <div class="form-review">
 <%= simple_form_for([ tool, review ], remote: true) do |form| %>
   <%= form.input :description, as: :text %>
 
   <%= form.input :rating, required: true, :collection => ["1", "2", "3", "4", "5"] %>
-  <%= form.button :submit %>
+  <div class="text-center">
+  <%= form.button :submit, class: "btn-primary text-center"%>
+  </div>
 <% end %>
+</div>
+</div>

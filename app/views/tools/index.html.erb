@@ -23,7 +23,7 @@
 
   <div class="container">
     <div class="row">
-      <h1>Tools</h1>
+      <h4>Tools</h4>
       <% @tools.each do |tool| %>
         <div class="col-xs-12 col-sm-4 col-md-3">
            <%= link_to tool_path(tool) do %>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="caption-b">
                 <p><%= tool.category.name %></p>
-                <p>Amount: <%= humanized_money_with_symbol(tool.price) %></p>
+                <p><%= humanized_money_with_symbol(tool.price) %></p>
               </div>
             </div>
             <% end %>
