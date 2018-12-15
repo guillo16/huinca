@@ -10,7 +10,11 @@
     </div>
         <div class="col-sm-12 col-md-6">
           <div class="content">
-            <p>Some awesome description of our amazing tool</p>
+            <p>Some awesome description <br>
+              <br>of our amazing tool
+            djdjdjd <br>
+          jdjdjdjdj <br>
+        jdjdjdjd</p>
             <p>Amount: <%= humanized_money_with_symbol(@tool.price) %></p>
             <%= form_tag orders_path do %>
             <%= hidden_field_tag 'tool_id', @tool.id %>
@@ -18,19 +22,18 @@
             <% end %>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6">
-    <div id="reviews">
-        <h4> Deja tu comentario:</h4>
-        <% @tool.reviews.each do |review| %>
-          <%= render 'reviews/show', review: review %>
-      <% end %>
+
     </div>
-  </div>
-  </div>
-
-
-
-<%= render 'reviews/form', tool: @tool, review: @review %>
-
+    <div class="col-sm-12 col-md-6">
+          <div id="reviews">
+            <p> comentarios (<%= @tool.reviews.size %>) </p>
+            <h4> Deja tu comentario:</h4>
+            <% @tool.reviews.each do |review| %>
+            <%= render 'reviews/show', review: review %>
+            <% end %>
+          </div>
+        </div>
+    <%= render 'reviews/form', tool: @tool, review: @review %>
 </div>
+
 
