@@ -37,8 +37,9 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: black;
   font-size: 14px;
+  font-weight: bold;
 }
 .navbar-wagon-link:hover {
   color: #da552f;
@@ -92,6 +93,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-right: 10px;
 }
 
 /* Dropdown Content (Hidden by Default) */
