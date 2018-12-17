@@ -12,11 +12,16 @@
       <h5> <%= link_to tools_path(name: "Amoladora") do %>Amoladora<% end %></h5>
       <h5> <%= link_to tools_path(name: "Grupo-electrogeno") do %>Grupo-electrogeno<% end %></h5>
     <h4>Novedades</h4>
+    <h5>  <%= link_to tools_path(created_at: :desc) do %>Lo mas reciente<% end %></h5>
 
     <h4>Precio</h4>
       <h5><%= link_to "$ 10--20", tools_path(min_price_cents: 1000, max_price_cents: 2000) %> </h5>
       <h5><%= link_to "40-50", tools_path(min_price_cents: 4000, max_price_cents: 5000) %> </h5>
-      <h5><%= link_to "200-800", tools_path(min_price_cents: 20000, max_price_cents: 50000) %></h5>
+      <h5><%= link_to "10-800", tools_path(min_price_cents: 1, max_price_cents: 50000) %></h5>
+      <h4> Ordenar </h4>
+       <h5>  <%= link_to tools_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
+
+
   </div>
 
 

@@ -6,7 +6,10 @@ class ToolsController < ApplicationController
       @tools = Tool.where(name: params["name"])
     elsif params["min_price_cents"]
       @tools = Tool.where("price_cents BETWEEN ? AND ?", params["min_price_cents"], params["max_price_cents"])
-
+    elsif params["created_at"]
+      @tools = Tool.order(created_at: :desc)
+    elsif params["price_cents"]
+      @tools = Tool.order(price_cents: :desc)
     else
       @tools
   end
