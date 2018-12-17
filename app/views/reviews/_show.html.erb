@@ -2,6 +2,7 @@
 <% review.rating.times do %>
 <i class="fas fa-star"></i>
 <% end %>
+ <%= review.created_at.strftime("%d de %B de %Y") %>
 <p><%= review.description %></p>
 
 

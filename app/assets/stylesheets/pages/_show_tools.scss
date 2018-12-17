@@ -1,25 +1,43 @@
-
-
 #reviews {
+
   text-align: left;
-  font-size: 16px;
+  font-size: 12px;
   background-color: white;
+
   p {
+    font-size: 16px;
+
+    margin-left: 5px;
+    margin-right: 5px;
     border-bottom: 2px solid;
     padding-bottom: 6px;
+    margin-bottom: 5px;
+ }
+ h5 {
+  font-weight: bold;
+  margin-left: 5px;
  }
  h6 {
-  border: 2px solid;
+  margin-left: 6px;
+  border-bottom: 2px solid;
   padding: 2px;
+  width: 28%;
  }
+ i {
+  font-size: 16px;
+  margin-left: 3px;
+}
 }
 
 .content {
-
+ h2 {
+   margin-bottom: 20px;
+   margin-top: 0px;
+ }
 
 .btn {
-  padding-right: 85px;
-  padding-left: 85px;
+  padding-right: 200px;
+  padding-left: 200px;
   padding-bottom: 10px;
   padding-top: 10px;
   background-color: black;
@@ -29,8 +47,14 @@
 }
 }
 
-.form-review {
- width: 400px;
- text-decoration: none;
 
+.form-review {
+ width: 500px;
+ text-decoration: none;
+ margin-bottom: 30px;
+ margin-top: 30px;
+ background-color: #f4f4f4;
+ .btn {
+  width: 100%;
+ }
 }

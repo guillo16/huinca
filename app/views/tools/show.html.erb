@@ -10,12 +10,12 @@
     </div>
         <div class="col-sm-12 col-md-6">
           <div class="content">
-            <p>Some awesome description <br>
-              <br>of our amazing tool
-            djdjdjd <br>
-          jdjdjdjdj <br>
-        jdjdjdjd</p>
-            <p>Amount: <%= humanized_money_with_symbol(@tool.price) %></p>
+            <p><%= @tool.sku %></p>
+            <h2><%= @tool.name %></h2>
+            <p>Un gran prducto especial para limpiar la casa y todo el hogar medidas :
+            89cm - 30cm </p>
+
+            <p>Precio: <%= humanized_money_with_symbol(@tool.price) %></p>
             <%= form_tag orders_path do %>
             <%= hidden_field_tag 'tool_id', @tool.id %>
             <%= submit_tag 'Comprar', class: 'btn' %>
@@ -26,15 +26,18 @@
     </div>
     <div class="col-sm-12 col-md-6">
           <div id="reviews">
-            <h5> Comentarios (<%= @tool.reviews.size %>) </h5>
-             <h6> Deja tu comentario</h6>
+            <h5> Evaluaciones (<%= @tool.reviews.size %>) </h5>
+
+             <h6>Deja tu reseña</h6>
 
             <% @tool.reviews.each do |review| %>
             <%= render 'reviews/show', review: review %>
             <% end %>
           </div>
+          <%= render 'reviews/form', tool: @tool, review: @review %>
         </div>
-    <%= render 'reviews/form', tool: @tool, review: @review %>
+
+
 </div>
 
 
