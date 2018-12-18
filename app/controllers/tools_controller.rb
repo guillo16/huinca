@@ -10,6 +10,8 @@ class ToolsController < ApplicationController
       @tools = Tool.order(created_at: :desc)
     elsif params["price_cents"]
       @tools = Tool.order(price_cents: :desc)
+    elsif params["brand"]
+      @tools = Tool.where(brand: params["brand"])
     else
       @tools
   end
