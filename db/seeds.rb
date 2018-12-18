@@ -93,7 +93,7 @@ Peso neto:1.6kg (3.5lbs)
 Cable de conexión:2.5m ", photo_url: 'https://http2.mlstatic.com/cizalla-electrica-p-acero-makita-380w-16mm-js1602-lacueva-D_NQ_NP_632409-MLA28703300346_112018-F.webp')
 Tool.create!(sku: 'gr7-4000', name:'Taladro Atornillador Electrico Bosch Torque E', category: bosch, brand: "Bosch", price: 3395, description: "• El único atornillador/taladro con cable que posee control de torque (24+1) y embrague de seguridad.
 • Dos velocidades: mejor combinación de torque y velocidad para atornillados y perforaciones.
-• Interruptor electrónico: velocidad bajo control en los atornillados.", string: 'martillo', photo_url: 'https://http2.mlstatic.com/taladro-atornillador-electrico-bosch-gsr-7-14-400w-torque-e-D_NQ_NP_789288-MLA27403748643_052018-F.webp')
+• Interruptor electrónico: velocidad bajo control en los atornillados.", string: 'taladro', photo_url: 'https://http2.mlstatic.com/taladro-atornillador-electrico-bosch-gsr-7-14-400w-torque-e-D_NQ_NP_789288-MLA27403748643_052018-F.webp')
 
 puts 'finished.'
 

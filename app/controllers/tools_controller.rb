@@ -2,8 +2,8 @@ class ToolsController < ApplicationController
   skip_before_action :authenticate_user!
   def index
     @tools = Tool.all
-    if params["name"]
-      @tools = Tool.where(name: params["name"])
+    if params["string"]
+      @tools = Tool.where(string: params["string"])
     elsif params["min_price_cents"]
       @tools = Tool.where("price_cents BETWEEN ? AND ?", params["min_price_cents"], params["max_price_cents"])
     elsif params["created_at"]
@@ -12,8 +12,6 @@ class ToolsController < ApplicationController
       @tools = Tool.order(price_cents: :desc)
     elsif params["brand"]
       @tools = Tool.where(brand: params["brand"])
-    elsif params["string"]
-      @tools = Tool.where(string: params["string"])
     else
       @tools
   end
