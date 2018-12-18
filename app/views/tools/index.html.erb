@@ -2,28 +2,33 @@
   <div id="list">
 
     <h4>Marcas</h4>
-      <h5> <%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
-      <h5> <%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
-      <h5> <%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
-      <h5> <%= link_to tools_path(brand: "Tersuave") do %>Tersuave<% end %></h5>
+      <h5><%= link_to tools_path(brand: "black_decker") do %>Black-decker<% end %></h5>
+      <h5><%= link_to tools_path(brand: "bosch") do %>Bosch<% end %></h5>
+      <h5><%= link_to tools_path(brand: "dewalt") do %>Dewalt<% end %></h5>
+      <h5><%= link_to tools_path(brand: "Hyundai") do %>Hyundai<% end %></h5>
+      <h5><%= link_to tools_path(brand: "makita") do %>Makita<% end %></h5>
+      <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
+      <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
+
     <h4>Categorias</h4>
-      <h5> <%= link_to tools_path(name: "martillo") do %>Martillos<% end %></h5>
-      <h5> <%= link_to tools_path(name: "taladro") do %>Taladros<% end %></h5>
-      <h5> <%= link_to tools_path(name: "Amoladora") do %>Amoladora<% end %></h5>
-      <h5> <%= link_to tools_path(name: "Grupo-electrogeno") do %>Grupo-electrogeno<% end %></h5>
-    <h4>Novedades</h4>
-    <h5>  <%= link_to tools_path(created_at: :desc) do %>Lo mas reciente<% end %></h5>
+      <h5> <%= link_to tools_path(string: "amoladora") do %>Amoladora<% end %></h5>
+      <h5> <%= link_to tools_path(string: "grupo electrogeno") do %>Grupo electrogeno<% end %></h5>
+      <h5> <%= link_to tools_path(string: "martillo") do %>Martillos<% end %></h5>
+      <h5> <%= link_to tools_path(string: "Motosierra") do %>Motosierra<% end %></h5>
+
+      <h5> <%= link_to tools_path(string: "sierra") do %>Sierra<% end %></h5>
+      <h5> <%= link_to tools_path(string: "taladro") do %>Taladros<% end %></h5>
 
     <h4>Precio</h4>
-      <h5><%= link_to "$ 10--20", tools_path(min_price_cents: 1000, max_price_cents: 2000) %> </h5>
-      <h5><%= link_to "40-50", tools_path(min_price_cents: 4000, max_price_cents: 5000) %> </h5>
-      <h5><%= link_to "10-800", tools_path(min_price_cents: 1, max_price_cents: 50000) %></h5>
-      <h4> Ordenar </h4>
+      <h5><%= link_to "1000-3000 $", tools_path(min_price_cents: 100000, max_price_cents: 300000) %> </h5>
+      <h5><%= link_to "3000-6000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
+      <h5><%= link_to "6000-10000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
+      <h5> <%= link_to tools_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
+      <i class="fas fa-plus"></i> 10000 $<% end %> </h5>
+    <h4> Ordenar </h4>
+       <h5><%= link_to tools_path(created_at: :desc) do %>Lo mas reciente<% end %></h5>
        <h5>  <%= link_to tools_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
-
-
   </div>
-
   <div class="container">
     <div class="row">
        <br>
@@ -35,11 +40,12 @@
               <div class="thumbnail-tool" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url( '<%= tool.photo_url %> ')">
               </div>
               <div class="caption-tool">
-                <h3><%= link_to tool.name, tool_path(tool) %></h3>
+                <h5><%= link_to truncate(tool.name, lenght: 13), tool_path(tool) %></h5>
                 </div>
                 <div class="caption-b">
-                <p><%= tool.category.name %></p>
-                <p><%= humanized_money_with_symbol(tool.price) %></p>
+                  <p> <i class="fas fa-truck-moving"></i> Envio gratis a todo el pais
+                <h4><%= tool.brand %></h4>
+                <h4><%= humanized_money_with_symbol(tool.price) %></h4>
               </div>
             </div>
             <% end %>

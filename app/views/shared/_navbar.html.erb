@@ -7,51 +7,54 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <% if user_signed_in? %>
+
 
       <!-- Links when logged in -->
         <div class="dropdown">
           <button class="dropbtn">Categorias <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
-            <%= link_to tools_path(name: "martillo") do %>
-        Martillos <% end %>
-            <%= link_to tools_path(name: "Martillos") do %>Martillos<% end %>
-            <%= link_to tools_path(name: "taladro") do %>Taladros<% end %>
-            <%= link_to tools_path(name: "Amoladora") do %>Amoladora<% end %>
-            <%= link_to tools_path(name: "Grupo-electrogeno") do %>Grupo-electrogeno<% end %>
+          <h5><%= link_to tools_path(string: "amoladora") do %>Amoladora<% end %></h5>
+          <h5><%= link_to tools_path(string: "grupo electrogeno") do %>Grupo electrogeno<% end %></h5>
+          <h5><%= link_to tools_path(string: "martillo") do %>Martillos<% end %></h5>
+          <h5><%= link_to tools_path(string: "Motosierra") do %>Motosierra<% end %></h5>
+          <h5><%= link_to tools_path(string: "sierra") do %>Sierra<% end %></h5>
+          <h5><%= link_to tools_path(string: "taladro") do %>Taladros<% end %></h5>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn">Marcas <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
-            <h5> <%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
-            <h5> <%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
-            <h5> <%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
-            <h5> <%= link_to tools_path(brand: "Tersuave") do %>Tersuave<% end %></h5>
+            <h5><%= link_to tools_path(brand: "black_decker") do %>Black-decker<% end %></h5>
+            <h5><%= link_to tools_path(brand: "bosch") do %>Bosch<% end %></h5>
+            <h5><%= link_to tools_path(brand: "dewalt") do %>Dewalt<% end %></h5>
+            <h5><%= link_to tools_path(brand: "Hyundai") do %>Hyundai<% end %></h5>
+            <h5><%= link_to tools_path(brand: "makita") do %>Makita<% end %></h5>
+            <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
+            <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn">Precio <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
-            <%= link_to "$ 10--20", tools_path(min_price_cents: 1000, max_price_cents: 2000) %>
-            <%= link_to "40-50", tools_path(min_price_cents: 4000, max_price_cents: 5000) %>
-            <%= link_to "200-800", tools_path(min_price_cents: 20000, max_price_cents: 50000) %>
+              <h5><%= link_to "1000-3000 $", tools_path(min_price_cents: 100000, max_price_cents: 300000) %> </h5>
+              <h5><%= link_to "3000-6000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
+              <h5><%= link_to "6000-10000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
+              <h5> <%= link_to tools_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
+              <i class="fas fa-plus"></i> 10000 $<% end %> </h5>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">Novedades <i class="fas fa-angle-down"></i></button>
+          <button class="dropbtn">Ordenar <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
+            <h5><%= link_to tools_path(created_at: :desc) do %>Novedades<% end %></h5>
+            <h5>  <%= link_to tools_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
           </div>
         </div>
 
 
 
       <!-- Avatar with dropdown menu -->
+      <% if user_signed_in? %>
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <button class="dropbtn">
@@ -68,44 +71,6 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-       <div class="dropdown">
-          <button class="dropbtn">Categorias <i class="fas fa-angle-down"></i></button>
-          <div class="dropdown-content">
-            <%= link_to tools_path(name: "martillo") do %>
-        Martillos <% end %>
-            <%= link_to tools_path(name: "Martillos") do %>Martillos<% end %>
-            <%= link_to tools_path(name: "taladro") do %>Taladros<% end %>
-            <%= link_to tools_path(name: "Amoladora") do %>Amoladora<% end %>
-            <%= link_to tools_path(name: "Grupo-electrogeno") do %>Grupo-electrogeno<% end %>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Marcas <i class="fas fa-angle-down"></i></button>
-          <div class="dropdown-content">
-            <h5> <%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
-            <h5> <%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
-            <h5> <%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
-            <h5> <%= link_to tools_path(brand: "Tersuave") do %>Tersuave<% end %></h5>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Precio <i class="fas fa-angle-down"></i></button>
-          <div class="dropdown-content">
-            <%= link_to "$ 10--20", tools_path(min_price_cents: 1000, max_price_cents: 2000) %>
-            <%= link_to "40-50", tools_path(min_price_cents: 4000, max_price_cents: 5000) %>
-            <%= link_to "200-800", tools_path(min_price_cents: 20000, max_price_cents: 50000) %>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Novedades <i class="fas fa-angle-down"></i></button>
-          <div class="dropdown-content">
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-            <%= link_to 'productos', tools_path %>
-          </div>
-        </div>
        <%= link_to t(".sign_in", default: "Iniciar Sesion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
