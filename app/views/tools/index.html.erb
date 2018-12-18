@@ -44,7 +44,15 @@
                 <h5><%= link_to truncate(tool.name, lenght: 10), tool_path(tool) %></h5>
                 </div>
                 <div class="caption-b">
-                  <p> <i class="fas fa-truck-moving"></i> Envio gratis a todo el pais
+
+                  <h5>  <% tool.average.times do %>
+                 <i class="fas fa-star"></i>
+                 <% end %>
+                 <% (5 - tool.average).times do %>
+                 <i class="far fa-star"></i>
+                 <% end %>( <%= tool.reviews.size %> )</h5>
+                <p> <i class="fas fa-truck-moving"></i> Envio gratis a todo el pais </p>
+
                 <h4><%= tool.brand %></h4>
                 <h4><%= humanized_money_with_symbol(tool.price) %></h4>
               </div>
