@@ -13,10 +13,9 @@
           <div class="content">
             <p><%= @tool.sku %></p>
             <h2><%= @tool.name %></h2>
-            <p>Un gran prducto especial para limpiar la casa y todo el hogar medidas :
-            89cm - 30cm </p>
+            <p><%= @tool.description %></p>
 
-            <p>Precio: <%= humanized_money_with_symbol(@tool.price) %></p>
+            <h1> <%= humanized_money_with_symbol(@tool.price) %></h1>
             <%= form_tag orders_path do %>
             <%= hidden_field_tag 'tool_id', @tool.id %>
             <%= submit_tag 'Comprar', class: 'btn' %>
@@ -37,8 +36,6 @@
           </div>
           <%= render 'reviews/form', tool: @tool, review: @review %>
         </div>
-
-
 </div>
 
 

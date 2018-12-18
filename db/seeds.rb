@@ -25,6 +25,9 @@ Tool.create!(sku: 'grs-180', name:'martillo', category: bosch, brand: "Stanley",
 Tool.create!(sku: 'fs-100', name:'martillo', category: bosch, brand: "Stanley", price: 1040, photo_url: 'https://static.stihl.com/upload/produkte/images/gruppen/middle/14f238c5216a467aa04246c42cc89b6e.jpg')
 Tool.create!(sku: 'gks-190', name:'martillo', category: bosch, brand: "Bosch", price: 1040, photo_url: 'https://www.bosch-professional.com/binary/ocsmedia/optimized/767x767/o48684v186_hugks122.jpg')
 Tool.create!(sku: 'gsa-1100', name:'martillo', category: bosch, brand: "Bosch", price: 1040, photo_url: 'https://www.bosch-professional.com/binary/ocsmedia/optimized/530x530/o46909v54_GSA-RS7_Dynamik.png')
+Tool.create!(sku: 'gr7-4000', name:'Taladro Atornillador Electrico Bosch Torque E', category: bosch, brand: "Bosch", price: 3395, description: "• El único atornillador/taladro con cable que posee control de torque (24+1) y embrague de seguridad.
+• Dos velocidades: mejor combinación de torque y velocidad para atornillados y perforaciones.
+• Interruptor electrónico: velocidad bajo control en los atornillados.", string: 'martillo', photo_url: 'https://http2.mlstatic.com/taladro-atornillador-electrico-bosch-gsr-7-14-400w-torque-e-D_NQ_NP_789288-MLA27403748643_052018-F.webp')
 
 puts 'finished.'
 
