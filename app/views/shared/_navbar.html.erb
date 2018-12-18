@@ -36,7 +36,8 @@
         <div class="dropdown">
           <button class="dropbtn">Precio <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
-              <h5><%= link_to "1000-3000 $", tools_path(min_price_cents: 100000, max_price_cents: 300000) %> </h5>
+              <h5> <%= link_to tools_path(min_price_cents: 1, max_price_cents: 300001) do %>
+              <i class="fas fa-minus"></i> 3000 $<% end %> </h5>
               <h5><%= link_to "3000-6000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
               <h5><%= link_to "6000-10000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
               <h5> <%= link_to tools_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
@@ -47,7 +48,7 @@
           <button class="dropbtn">Ordenar <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
             <h5><%= link_to tools_path(created_at: :desc) do %>Novedades<% end %></h5>
-            <h5>  <%= link_to tools_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
+            <h5>  <%= link_to tools_path(price_cents: :desc) do %>Mas alto - Mas bajo<% end %></h5>
           </div>
         </div>
 

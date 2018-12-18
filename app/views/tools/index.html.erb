@@ -20,7 +20,8 @@
       <h5> <%= link_to tools_path(string: "taladro") do %>Taladros<% end %></h5>
 
     <h4>Precio</h4>
-      <h5><%= link_to "1000-3000 $", tools_path(min_price_cents: 100000, max_price_cents: 300000) %> </h5>
+      <h5> <%= link_to tools_path(min_price_cents: 1, max_price_cents: 300001) do %>
+      <i class="fas fa-minus"></i> 3000 $<% end %> </h5>
       <h5><%= link_to "3000-6000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
       <h5><%= link_to "6000-10000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
       <h5> <%= link_to tools_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
@@ -40,7 +41,7 @@
               <div class="thumbnail-tool" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url( '<%= tool.photo_url %> ')">
               </div>
               <div class="caption-tool">
-                <h5><%= link_to truncate(tool.name, lenght: 13), tool_path(tool) %></h5>
+                <h5><%= link_to truncate(tool.name, lenght: 10), tool_path(tool) %></h5>
                 </div>
                 <div class="caption-b">
                   <p> <i class="fas fa-truck-moving"></i> Envio gratis a todo el pais
