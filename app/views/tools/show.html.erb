@@ -42,7 +42,15 @@
             <%= render 'reviews/show', review: review %>
             <% end %>
           </div>
+
+           <% if user_signed_in? %>
           <%= render 'reviews/form', tool: @tool, review: @review %>
+          <%else %>
+          <div class="links-tool">
+          <%= link_to t(".sign_in", default: "Iniciar Sesion para dejar reseña"), new_user_session_path, class: "btn btn-primary" %>
+          <% end  %>
+          </div>
+
         </div>
 </div>
 
