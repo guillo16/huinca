@@ -1,8 +1,10 @@
 class ReviewsController < ApplicationController
+
    def create
      @tool = Tool.find(params[:tool_id])
      @review = Review.new(review_params)
      @review.tool = @tool
+     @review.user = current_user
      if @review.save
       respond_to do |format|
         format.html { redirect_to tool_path(@tool) }
@@ -21,4 +23,6 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:description, :rating)
   end
+
+
 end
