@@ -124,7 +124,7 @@ Diámetro de disco: 7-1/4'' (185 mm.)
 La caja contiene: Sierra circular, hoja de sierra de 18 dientes de carburo, llave y guía paralela.
 Ajuste manual fácil y rápido del ángulo de biselado de 0 a 45°
 Profundidad de corte de hasta 62 mm. a 90°C", photo_url: 'https://http2.mlstatic.com/sierra-circular-1700w-disco-7-14-stsc1718-stanley-pintumm-D_NQ_NP_679396-MLA27913648455_082018-F.webp')
-Tool.create!(sku: 'stih-0003', name:'Sierra Circular Bosch ', category: bosch, brand: "Bosch", price: 43599, string: "sierra", description: "Potencia: 1700 W
+Tool.create!(sku: 'stih-0009', name:'Sierra Circular Bosch ', category: bosch, brand: "Bosch", price: 43599, string: "sierra", description: "Potencia: 1700 W
 Velocidad sin carga: 5500 RPM
 Diámetro de disco: 7-1/4'' (185 mm.)
 La caja contiene: Sierra circular, hoja de sierra de 18 dientes de carburo, llave y guía paralela.
@@ -180,7 +180,7 @@ Luz de Led para iluminar la zona de trabajo.
 Mango ergonómico y cubierto de goma para mayor comodidad del usuario.
 Clip lateral para montar sobre cinturón.
 2 Velocidades mecánicas para aplicaciones de mayor exigencia.", photo_url: 'https://http2.mlstatic.com/taladro-atornillador-dewalt-D_NQ_NP_644436-MLA27284478550_052018-F.webp')
-Tool.create!(sku: '', name:'Taladro Makita de Litio', category: makita , brand: "Makita", price: 33920, string: "taladro", description: "Martillo driver-drill y función de destornillador de impacto tanto XPT (tecnología de protección de eXtreme) que está diseñado para proporcionar mayor resistencia al agua y polvo en condiciones duras en lugar de trabajo
+Tool.create!(sku: 'mak-0019', name:'Taladro Makita de Litio', category: makita , brand: "Makita", price: 33920, string: "taladro", description: "Martillo driver-drill y función de destornillador de impacto tanto XPT (tecnología de protección de eXtreme) que está diseñado para proporcionar mayor resistencia al agua y polvo en condiciones duras en lugar de trabajo
 Equipado con Star Protección Computer los controles para proteger contra descarga profunda, sobrecarga y sobrecalentamiento.
 Batería de ión de litio 18 V LXT – 4.0 Ah bl1840b incluye un LED indicador de nivel de carga de la batería", photo_url: 'https://http2.mlstatic.com/juego-taladros-makita-xt261m-de-iones-de-litio-inalambrico-D_NQ_NP_942175-MLA28935752762_122018-F.webp')
 
