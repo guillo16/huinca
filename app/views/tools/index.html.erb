@@ -7,30 +7,34 @@
       <h5><%= link_to tools_path(brand: "Dewalt") do %>Dewalt<% end %></h5>
       <h5><%= link_to tools_path(brand: "Hyundai") do %>Hyundai<% end %></h5>
 
-       <div style="display:none;" id="myDIV">
+      <div style="display:none;" id="myDIV">
         <h5><%= link_to tools_path(brand: "Lusqtoff") do %>Lusqtoff<% end %></h5>
         <h5><%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
         <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
         <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
-
       </div>
+      <button id="myButton" onClick="myFunction(); toggleText(this.id);">more +</button>
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
 
-      <input onclick="myFunction()" type="button" value="more" id=myButton1"></input>
-
-      <script>
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-
-}
-
-
-
-</script>
+          }
+            function toggleText(button_id)  {
+             if (document.getElementById(button_id).innerText == "more +")
+             {
+                 document.getElementById(button_id).innerText = "less -";
+             }
+             else
+             {
+               document.getElementById(button_id).innerText = "more +";
+             }
+          }
+        </script>
 
     <h4>Categorias</h4>
       <h5> <%= link_to tools_path(string: "amoladora") do %>Amoladora<% end %></h5>
@@ -41,13 +45,38 @@ function myFunction() {
       <h5> <%= link_to tools_path(string: "sierra") do %>Sierra<% end %></h5>
       <h5> <%= link_to tools_path(string: "taladro") do %>Taladros<% end %></h5>
 
-    <h4>Precio</h4>
+
+    <button id="myPriceButton" onClick="myPriceFunction(); togglePrice(this.id);">Precio +</button>
+    <div style="display:none;" id="myPrice">
       <h5> <%= link_to tools_path(min_price_cents: 1, max_price_cents: 300001) do %>
       <i class="fas fa-minus"></i> 3000 $<% end %> </h5>
       <h5><%= link_to "3000-6000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
       <h5><%= link_to "6000-10000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
       <h5> <%= link_to tools_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
       <i class="fas fa-plus"></i> 10000 $<% end %> </h5>
+    </div>
+
+     <script>
+            function myPriceFunction() {
+            var x = document.getElementById("myPrice");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+
+          }
+            function togglePrice(myPriceButton)  {
+             if (document.getElementById(myPriceButton).innerText == "Precio +")
+             {
+                 document.getElementById(myPriceButton).innerText = "Precio -";
+             }
+             else
+             {
+               document.getElementById(myPriceButton).innerText = "Precio +";
+             }
+          }
+        </script>
     <h4> Ordenar </h4>
        <h5><%= link_to tools_path(created_at: :desc) do %>Lo mas reciente<% end %></h5>
        <h5>  <%= link_to tools_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
