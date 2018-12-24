@@ -6,10 +6,31 @@
       <h5><%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
       <h5><%= link_to tools_path(brand: "Dewalt") do %>Dewalt<% end %></h5>
       <h5><%= link_to tools_path(brand: "Hyundai") do %>Hyundai<% end %></h5>
-      <h5><%= link_to tools_path(brand: "Lusqtoff") do %>Lusqtoff<% end %></h5>
-      <h5><%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
-      <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
-      <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
+
+       <div style="display:none;" id="myDIV">
+        <h5><%= link_to tools_path(brand: "Lusqtoff") do %>Lusqtoff<% end %></h5>
+        <h5><%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
+        <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
+        <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
+
+      </div>
+
+      <input onclick="myFunction()" type="button" value="more" id=myButton1"></input>
+
+      <script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+}
+
+
+
+</script>
 
     <h4>Categorias</h4>
       <h5> <%= link_to tools_path(string: "amoladora") do %>Amoladora<% end %></h5>
