@@ -1,15 +1,32 @@
 
-.payment {
-  text-align: center;
+.payment-wrapper {
+  margin: 30px 50px 50px 50px;
   height: 80vh;
+}
+.payment {
+  height: 200px;
+
+  margin-top: 50px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+
+
 }
 
 .payment-container {
-  height: 50%;
-  background-color: white;
-  margin-right: 30px;
-  margin-top: 30px;
-    margin-left: 30px;
 
+  flex-grow: 1;
+  margin-left: 30px;
+  text-align: left;
+}
 
+.images-payment {
+ background-size: cover !important;
+ margin-left: 15px;
+}
+
+.payment-order {
+ margin-top: 20px;
+ margin-right: 20px;
 }
