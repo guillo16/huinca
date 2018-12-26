@@ -26,7 +26,49 @@ display: flex;
       text-decoration: none;
     }
    }
+   #myCatButton {
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 20px;
+  background-color: #fafafa;
+  border: 0;
+  &:hover {
+    color: lightgrey;
+      text-decoration: none;
+  }
+ }
+ #myButton{
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 20px;
+  background-color: #fafafa;
+  border: 0;
+  &:hover {
+    color: lightgrey;
+      text-decoration: none;
+  }
+ }
+
+  #myPriceButton {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 0px;
+  background-color: #fafafa;
+  border: 0;
+  word-spacing: 100px;
+ }
+
+ #myOrderButton {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 0px;
+  background-color: #fafafa;
+  border: 0;
+  word-spacing: 80px;
+ }
 }
+
+
 
 .thumbnail-tool {
   position: relative;
