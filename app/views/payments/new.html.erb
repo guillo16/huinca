@@ -1,25 +1,32 @@
-<div class="payment">
-  <div class="payment-container">
-<h4>Compra de las herramientas <%= @order.tool_sku %></h4>
-<h5> Cantidad: 1</h5>
+<div class="container">
+<div class="payment-wrapper">
 
-
-<%= form_tag order_payments_path(@order) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
-    </label>
-  </article>
-
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="Mi herramienta"
-    data-email="<%= current_user.email %>"
-    data-description="Herramienta <%= @order.tool_sku %>"
-    data-amount="<%= @order.amount_cents %>"
-    data-currency="<%= @order.amount.currency %>"></script>
-
-<% end %>
+  <div class="payment">
+    <div class="images-payment">
+      <img src="https://http2.mlstatic.com/amoladora-ang-180mm-7-2400w-makita-sama-in-home-D_NQ_NP_859101-MLA20284012831_042015-F.webp" alt="image" width="175px">
+    </div>
+    <div class="payment-container">
+      <h4> Nombre del producto </h4>
+      <h5>Sku: <%= @order.tool_sku %></h5>
+      <h5> Cantidad: 1</h5>
+      <h5> <%= @order.user_id %></h5>
+    </div>
+    <div class="payment-order">
+      <%= form_tag order_payments_path(@order) do %>
+        <article>
+          <label class="amount">
+            <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
+          </label>
+        </article>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="Mi herramienta"
+        data-email="<%= current_user.email %>"
+        data-description="Herramienta <%= @order.tool_sku %>"
+        data-amount="<%= @order.amount_cents %>"
+        data-currency="<%= @order.amount.currency %>"></script>
+      <% end %>
+    </div>
+  </div>
 </div>
 </div>
