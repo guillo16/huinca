@@ -34,20 +34,47 @@
           }
     </script>
 
-    <h4>Marcas</h4>
-      <h5><%= link_to tools_path(brand: "Black_decker") do %>Black-decker<% end %></h5>
-      <h5><%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
-      <h5><%= link_to tools_path(brand: "Dewalt") do %>Dewalt<% end %></h5>
-      <h5><%= link_to tools_path(brand: "Hyundai") do %>Hyundai<% end %></h5>
+    <h4><button id="myMarcaButton" onClick="myMarcaFunction(); toggleMarcaText(this.id);">Marcas -</button></h4>
+    <div id = "marcasDiv">
+        <h5><%= link_to tools_path(brand: "Black_decker") do %>Black-decker<% end %></h5>
+        <h5><%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
+        <h5><%= link_to tools_path(brand: "Dewalt") do %>Dewalt<% end %></h5>
+        <h5><%= link_to tools_path(brand: "Hyundai") do %>Hyundai<% end %></h5>
 
-      <div style="display:none;" id="myDIV">
-        <h5><%= link_to tools_path(brand: "Lusqtoff") do %>Lusqtoff<% end %></h5>
-        <h5><%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
-        <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
-        <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
+        <div style="display:none;" id="myDIV">
+          <h5><%= link_to tools_path(brand: "Lusqtoff") do %>Lusqtoff<% end %></h5>
+          <h5><%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
+          <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
+          <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
+        </div>
+        <button id="myButton" onClick="myFunction(); toggleText(this.id);">+ Mas</button>
       </div>
-      <button id="myButton" onClick="myFunction(); toggleText(this.id);">+ Mas</button>
         <script>
+
+           function myMarcaFunction() {
+            let b = document.getElementById("marcasDiv");
+            if (b.style.display === "none")
+            {
+              b.style.display = "block";
+            } else {
+              b.style.display = "none";
+            }
+           }
+
+           function toggleMarcaText(marcaButton) {
+
+            if (document.getElementById(marcaButton).innerText == "Marcas -")
+             {
+                 document.getElementById(marcaButton).innerText = "Marcas +";
+             }
+             else
+             {
+               document.getElementById(marcaButton).innerText = "Marcas -";
+             }
+
+           }
+
+
             function myFunction() {
             var x = document.getElementById("myDIV");
             if (x.style.display === "none") {
