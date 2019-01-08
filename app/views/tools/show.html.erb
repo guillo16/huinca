@@ -14,7 +14,6 @@
             <p><%= @tool.sku %></p>
             <h2><%= @tool.name %></h2>
             <p><%= @tool.description %></p>
-
             <h1> <%= humanized_money_with_symbol(@tool.price) %></h1>
             <%= form_tag orders_path do %>
             <%= hidden_field_tag 'tool_id', @tool.id %>
@@ -33,7 +32,8 @@
                  <% end %>
                  <% (5 - @tool.average).times do %>
                  <i class="far fa-star"></i>
-                 <% end %></h5>
+                 <% end %>
+               </h5>
                  </div>
 
              <h6>Deja tu reseña</h6>
