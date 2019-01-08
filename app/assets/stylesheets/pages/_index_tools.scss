@@ -2,6 +2,7 @@
 display: flex;
 }
 
+// list content
 
 #list {
  flex: 0 0 200px;
@@ -77,13 +78,15 @@ display: flex;
  }
 }
 
-
+// Cards Content
 
 .thumbnail-tool {
   position: relative;
   background-size: cover !important;
   // background-position: center;
-  height: 200px;
+  border-radius: 6px 6px 0 0;
+
+  height: 250px;
   padding: 0px;
 }
 
@@ -107,12 +110,16 @@ display: flex;
 
 .tool-card {
   background-size: cover !important;
+
   margin-bottom: 50px;
   border: 1px solid ;
   border-color: #F4F4F4;
 
+
+
 &:hover {
   border: 1px solid;
+  border-radius: 6px;
 }
 
 }
