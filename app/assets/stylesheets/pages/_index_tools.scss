@@ -107,19 +107,20 @@ display: flex;
 
 .tool-card {
   background-size: cover !important;
-  background-position: center;
+
   margin-bottom: 50px;
-  border: 2px solid ;
+  border: 1px solid ;
   border-color: #F4F4F4;
 
 .thumbnail-tool {
    border-radius: 6px 6px 0 0;
+   background-position: center;
 }
 
 
 
 &:hover {
-  border: 2px solid;
+  border: 1px solid;
   border-radius: 5px;
 }
 

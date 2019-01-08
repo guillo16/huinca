@@ -1,15 +1,19 @@
 <div class="order-container">
   <div class="order">
-<h1>Gracias por su compra</h1>
-<h3> Huinca Renanco Norte SRL</h3>
-<p> 9 de julio 948 San Miguel de Tucuman</p>
-<p><%= @order.created_at.strftime("%d de %B de %Y - %H:%M:%S") %></p>
-<ul>
-  <li>Item: <%= @order.tool_sku %></li>
-  <li>Estado: <%= @order.state %></li>
-  <li>Precio: <%= humanized_money_with_symbol(@order.amount) %></li>
-  <br>
-  <%= link_to 'back to home', tools_path, class: 'btn btn-primary' %>
-<ul>
+    <div class="order-content">
+      <h1>Gracias por su compra</h1>
+      <h3> Huinca Renanco Norte SRL</h3>
+      <p> 9 de julio 948 San Miguel de Tucuman</p>
+      <p><%= @order.created_at.strftime("%d de %B de %Y - %H:%M:%S") %></p>
+      <ul>
+        <li><strong>Item:</strong> <%= @order.tool_sku %></li>
+        <li><strong>Estado:</strong> <%= @order.state %></li>
+        <li><strong>Precio:</strong> <%= humanized_money_with_symbol(@order.amount) %></li>
+        <br>
+        </ul>
+      <div class="order-button">
+          <%= link_to 'Seguir Comprando', tools_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 </div>
