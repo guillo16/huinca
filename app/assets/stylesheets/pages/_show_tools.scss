@@ -1,3 +1,47 @@
+.tool-container {
+  display: flex;
+}
+
+//content
+#tool-content {
+ flex: 0 0 250px;
+ margin-top: 30px;
+ margin-right: 30px;
+
+
+ h2 {
+   margin-bottom: 20px;
+   margin-top: 0px;
+   font-weight: bold;
+   font-size: 23px;
+ }
+
+ p {
+  font-size: 15px;
+ }
+
+.btn-buy {
+  padding-right: 200px;
+  padding-left: 200px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 30px;
+}
+}
+
+.tool-img {
+ flex: 1 0 auto;
+ margin-left: 30px;
+ margin-top: 30px;
+}
+
+// reviews
+
 #reviews {
 
   text-align: left;
@@ -50,28 +94,6 @@ margin-top: 30px;
 
   }
 }
-
-.content {
- h2 {
-   margin-bottom: 20px;
-   margin-top: 0px;
-   font-weight: bold;
- }
-
-.btn {
-  padding-right: 200px;
-  padding-left: 200px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  width: 100%;
-  margin-top: 30px;
-}
-}
-
 
 .form-review {
  width: 500px;
