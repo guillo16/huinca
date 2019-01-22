@@ -79,7 +79,7 @@ Tool.create!(sku: 'bos-0013', name:'Amoladora Angular A Bateria Bosch Gws 18 V-l
 • Indicador de carga
 • Sistema COOLPACK de protección de baterías", photo_url: 'https://http2.mlstatic.com/amoladora-angular-a-bateria-bosch-gws-18-v-li-l-boxx-cuotas-D_NQ_NP_679912-MLA26702338698_012018-F.webp')
 
-Tool.create!(sku:'mak-0011', name:'amoladora', category: makita, brand: "Makita", price: 27500, string: "amoladora", description: "Diseñada para cortar hoja de metal y cubiertas de metal
+Tool.create!(sku:'mak-0011', name:'Amoladora Makita para metal', category: makita, brand: "Makita", price: 27500, string: "amoladora", description: "Diseñada para cortar hoja de metal y cubiertas de metal
 Potencia:380W
 Capacidad:
 Acero sobre 400 N/mm2: 1,6mm
