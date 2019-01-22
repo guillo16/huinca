@@ -1,26 +1,18 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <br>
-       <br>
-    </div>
+
+<div class="tool-container">
+  <div class="tool-img">
+      <%= image_tag(@tool.photo_url, width: '90%') %>
   </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <%= image_tag(@tool.photo_url, width: '100%') %>
-    </div>
-    <div class="col-sm-12 col-md-6">
-      <div class="content">
-        <p><%= @tool.sku %></p>
-        <h2><%= @tool.name %></h2>
-        <p><%= @tool.description %></p>
-        <h1> <%= humanized_money_with_symbol(@tool.price) %></h1>
-        <%= form_tag orders_path do %>
-        <%= hidden_field_tag 'tool_id', @tool.id %>
-        <%= submit_tag 'Comprar', class: 'btn' %>
-        <% end %>
-      </div>
-       <div id="reviews">
+  <div id="tool-content">
+    <p><%= @tool.sku %></p>
+    <h2><%= @tool.name.truncate(30) %></h2>
+    <p><%= @tool.description %></p>
+    <h1> <%= humanized_money_with_symbol(@tool.price) %></h1>
+    <%= form_tag orders_path do %>
+    <%= hidden_field_tag 'tool_id', @tool.id %>
+    <%= submit_tag 'Comprar', class: 'btn-buy' %>
+    <% end %>
+    <div id="reviews">
       <div class="title">
         <h5> Evaluaciones (<span id="review-count"><%= @tool.reviews.size %></span>)</h5>
         <h5> <% @tool.average.times do %>
@@ -42,9 +34,10 @@
           <%= link_to t(".sign_in", default: "Iniciar Sesion para dejar reseña"), new_user_session_path, class: "btn btn-primary" %>
       <% end  %>
      </div>
-    </div>
   </div>
 </div>
+
+
 
 
 
