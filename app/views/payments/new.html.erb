@@ -3,10 +3,10 @@
 
   <div class="payment">
     <div class="images-payment">
-      <img src="https://http2.mlstatic.com/amoladora-ang-180mm-7-2400w-makita-sama-in-home-D_NQ_NP_859101-MLA20284012831_042015-F.webp" alt="image" width="175px">
+      <img src=" <%= @tool.photo_url %>" alt="image" width="175px">
     </div>
     <div class="payment-container">
-      <h4> Nombre del producto </h4>
+      <h4> <%= @tool.name %> </h4>
       <h5>Sku: <%= @order.tool_sku %></h5>
       <h5> Cantidad: 1</h5>
       <h5> <%= @order.user_id %></h5>

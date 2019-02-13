@@ -1,14 +1,18 @@
 <div class="order-container">
   <div class="order">
     <div class="order-content">
-      <h1>Gracias por su compra</h1>
       <h3> Huinca Renanco Norte SRL</h3>
-      <p> 9 de julio 948 San Miguel de Tucuman</p>
-      <p><%= @order.created_at.strftime("%d de %B de %Y - %H:%M:%S") %></p>
+      <%= image_tag "logohuinca.png", height: 70 %>
+
+      <h4> 9 de julio 948 San Miguel de Tucuman</h4>
+      <h1>Gracias por su compra</h1>
+      <img src="http://www.solidrockvideo.com/wp-content/uploads/2017/06/success-icon-101-300x300.png" alt="paris" class="center-icon">
+
+      <h5><%= @order.created_at.strftime("%d de %B de %Y - %H:%M:%S") %></h5>
       <ul>
         <li><strong>Item:</strong> <%= @order.tool_sku %></li>
         <li><strong>Estado:</strong> <%= @order.state %></li>
-        <li><strong>Precio:</strong> <%= humanized_money_with_symbol(@order.amount) %></li>
+        <li><strong>Total:</strong> <%= humanized_money_with_symbol(@order.amount) %></li>
         <br>
         </ul>
       <div class="order-button">

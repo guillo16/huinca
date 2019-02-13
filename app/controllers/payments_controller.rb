@@ -2,9 +2,12 @@ class PaymentsController < ApplicationController
   before_action :set_order
 
   def new
+    @order = Order.find(params[:order_id])
+    @tool = Tool.find(@order.tool_id.to_i)
   end
 
   def create
+
     customer = Stripe::Customer.create(
         source: params[:stripeToken],
         email:  params[:stripeEmail]
