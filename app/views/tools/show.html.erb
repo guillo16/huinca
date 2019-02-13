@@ -8,9 +8,9 @@
     <h2><%= @tool.name.truncate(30) %></h2>
     <p><%= @tool.description %></p>
     <h1> <%= humanized_money_with_symbol(@tool.price) %></h1>
-    <%= form_tag orders_path do %>
-    <%= hidden_field_tag 'tool_id', @tool.id %>
-    <%= submit_tag 'Comprar', class: 'btn-buy' %>
+    <%= form_for(Order.new) do |f| %>
+    <%= f.hidden_field :tool, value: @tool.id %>
+    <%= f.submit 'Comprar', class: 'btn-buy' %>
     <% end %>
     <div id="reviews">
       <div class="title">
