@@ -1,6 +1,6 @@
 
 .order-container {
-  height: 80vh;
+  // height: 80vh;
   padding: 10px;
   margin-left: 30px;
   display: flex;
@@ -15,10 +15,37 @@
 .order-content{
   margin-left: 10px;
   margin-right: 10px;
+  h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  h5 {
+    text-align: center;
+    font-size: 10px;
+  }
+  img {
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  }
+  .center-icon {
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  }
+
  .order-button{
   text-align: center;
    .btn {
-
+    margin-bottom: 20px;
     border-radius: 6px;
     padding-bottom: 10px;
     padding-top: 10px;
