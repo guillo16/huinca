@@ -9,7 +9,7 @@
       <h4> <%= @tool.name %> </h4>
       <h5>Sku: <%= @order.tool_sku %></h5>
       <h5> Cantidad: 1</h5>
-      <h5> <%= @order.user_id %></h5>
+
     </div>
     <div class="payment-order">
       <%= form_tag order_payments_path(@order) do %>
