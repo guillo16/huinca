@@ -12,10 +12,13 @@ display: flex;
   top: 0 !important;
   background-color: #fafafa;
 
+
+
   h4 {
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
+
   }
 
   a {
@@ -33,6 +36,9 @@ display: flex;
   margin-left: 20px;
   background-color: #fafafa;
   border: 0;
+  &:focus {
+    outline: none;
+  }
   &:hover {
     color: lightgrey;
       text-decoration: none;
@@ -44,10 +50,15 @@ display: flex;
   margin-left: 20px;
   background-color: #fafafa;
   border: 0;
+  &:focus {
+    outline: none;
+  }
   &:hover {
     color: lightgrey;
       text-decoration: none;
   }
+
+
  }
 
   #myPriceButton {
@@ -57,6 +68,9 @@ display: flex;
   background-color: #fafafa;
   border: 0;
   word-spacing: 100px;
+  &:focus {
+    outline: none;
+  }
  }
 
  #myOrderButton {
@@ -66,6 +80,9 @@ display: flex;
   background-color: #fafafa;
   border: 0;
   word-spacing: 80px;
+  &:focus {
+    outline: none;
+  }
  }
 
  #myMarcaButton{
@@ -75,6 +92,9 @@ display: flex;
   background-color: #fafafa;
   border: 0;
   word-spacing: 92px;
+   &:focus {
+    outline: none;
+  }
  }
 }
 
