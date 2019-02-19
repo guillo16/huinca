@@ -1,6 +1,6 @@
 <div class="tool-container">
   <div class="tool-img">
-      <%= image_tag(@tool.photo_url, width: '90%') %>
+    <%= image_tag(@tool.photo_url, width: '90%') %>
   </div>
   <div id="tool-content">
     <p><%= @tool.sku %></p>
@@ -15,26 +15,26 @@
       <div class="title">
         <h5> Evaluaciones (<span id="review-count"><%= @tool.reviews.size %></span>)</h5>
         <h5> <% @tool.average.times do %>
-        <i class="fas fa-star"></i>
-        <% end %>
-        <% (5 - @tool.average).times do %>
-        <i class="far fa-star"></i>
-        <% end %></h5>
-      </div>
+          <i class="fas fa-star"></i>
+          <% end %>
+          <% (5 - @tool.average).times do %>
+          <i class="far fa-star"></i>
+          <% end %></h5>
+        </div>
         <h6>Deja tu reseña</h6>
         <% @tool.reviews.each do |review| %>
         <%= render 'reviews/show', review: review %>
         <% end %>
-    </div>
+      </div>
       <% if user_signed_in? %>
-        <%= render 'reviews/form', tool: @tool, review: @review %>
+      <%= render 'reviews/form', tool: @tool, review: @review %>
       <%else %>
-        <div class="links-tool">
-          <%= link_to t(".sign_in", default: "Iniciar Sesion para dejar reseña"), new_user_session_path, class: "btn btn-primary" %>
-      <% end  %>
-     </div>
+      <div class="links-tool">
+        <%= link_to t(".sign_in", default: "Iniciar Sesion para dejar reseña"), new_user_session_path, class: "btn btn-primary" %>
+        <% end  %>
+      </div>
+    </div>
   </div>
-</div>
 
 
 

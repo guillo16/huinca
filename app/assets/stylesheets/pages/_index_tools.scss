@@ -1,36 +1,34 @@
 .main-container {
-display: flex;
+  display: flex;
 }
 
 // list content
 
 #list {
  flex: 0 0 200px;
-  height: 100%;
-  height: 100vh;
-  position: sticky !important;
-  top: 0 !important;
-  background-color: #fafafa;
+ height: 100%;
+ height: 100vh;
+ position: sticky !important;
+ top: 0 !important;
+ background-color: #fafafa;
 
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
 
+}
 
-  h4 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 10px;
-
+a {
+  font-size: 15px;
+  color: black;
+  margin-left: 25px;
+  &:hover {
+    color: lightgrey;
+    text-decoration: none;
   }
-
-  a {
-    font-size: 15px;
-    color: black;
-    margin-left: 25px;
-    &:hover {
-      color: lightgrey;
-      text-decoration: none;
-    }
-   }
-   #myCatButton {
+}
+#myCatButton {
   font-size: 13px;
   font-weight: bold;
   margin-left: 20px;
@@ -41,10 +39,10 @@ display: flex;
   }
   &:hover {
     color: lightgrey;
-      text-decoration: none;
+    text-decoration: none;
   }
- }
- #myButton{
+}
+#myButton{
   font-size: 13px;
   font-weight: bold;
   margin-left: 20px;
@@ -55,13 +53,13 @@ display: flex;
   }
   &:hover {
     color: lightgrey;
-      text-decoration: none;
+    text-decoration: none;
   }
 
 
- }
+}
 
-  #myPriceButton {
+#myPriceButton {
   font-size: 20px;
   font-weight: bold;
   margin-left: 0px;
@@ -71,9 +69,9 @@ display: flex;
   &:focus {
     outline: none;
   }
- }
+}
 
- #myOrderButton {
+#myOrderButton {
   font-size: 20px;
   font-weight: bold;
   margin-left: 0px;
@@ -83,19 +81,19 @@ display: flex;
   &:focus {
     outline: none;
   }
- }
+}
 
- #myMarcaButton{
+#myMarcaButton{
   font-size: 20px;
   font-weight: bold;
   margin-left: 0px;
   background-color: #fafafa;
   border: 0;
   word-spacing: 92px;
-   &:focus {
+  &:focus {
     outline: none;
   }
- }
+}
 }
 
 // Cards Content
@@ -104,7 +102,7 @@ display: flex;
   position: relative;
   background-size: cover !important;
   // background-position: center;
-  border-radius: 6px 6px 0 0;
+  // border-radius: 6px 6px 0 0;
 
   height: 200px;
   padding: 0px;
@@ -119,7 +117,7 @@ display: flex;
 
   a {
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     &:hover {
       text-decoration: none;
@@ -130,32 +128,36 @@ display: flex;
 
 .tool-card {
   background-size: cover !important;
-
   margin-bottom: 50px;
   border: 1px solid ;
   border-color: #F4F4F4;
-
-
-
-&:hover {
-  border: 1px solid;
   border-radius: 6px;
-}
+  background-color: white;
+  padding: 20px;
+  box-shadow: 10px 10px 8px #F4F4F4;
+
+
+
+  &:hover {
+    // border: 1px solid;
+    // border-radius: 6px;
+    box-shadow: 10px 10px 8px #888888;
+  }
 
 }
 
 
 .caption-b {
-margin-left: 5px;
-margin-top: 10px;
-h5 {
+  margin-left: 5px;
+  margin-top: 10px;
+  h5 {
     font-size: 14px;
     font-weight: bold;
   }
 
-p {
-  font-size: 14px;
-  color: #469AE0;
-  margin-bottom: 30px;
-}
+  p {
+    font-size: 14px;
+    color: #469AE0;
+    margin-bottom: 30px;
+  }
 }
