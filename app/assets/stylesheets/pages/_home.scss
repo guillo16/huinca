@@ -7,23 +7,44 @@
   background-size: cover !important;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 30px;
-}
-.banner h1 {
-  font-size: 75px;
+  }
+
+  .banner-content {
+
+    h4 {
+
+  font-size: 85px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   color: white;
-  margin-top: - 150px;
+  // margin-top: - 150px;
+  width: 380px;
+  background-color: #3BDCFF;
+  padding: 0 0 0 20px;
+  margin-left: 150px;
 }
-.banner p {
+
+h5 {
   font-size: 25px;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
-  opacity: 0.6;
+  // font-weight: bold;
+  // color: rgb(255, 255, 255);
+  // opacity: 0.9;
   margin-bottom: 30px;
+  margin-left: 150px;
+  // background-color: black;
+  color: white;
+  padding: 40px;
 }
+  }
+
+
+
+
+
+
+
 
 .item {
 
