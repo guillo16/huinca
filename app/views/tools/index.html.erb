@@ -2,191 +2,191 @@
   <div id="list">
 
     <h4>Herramientas</h4>
-      <h5> <%= link_to tools_path(string: "amoladora") do %>Amoladora<% end %></h5>
-      <h5> <%= link_to tools_path(string: "grupo electrogeno") do %>Grupo electrogeno<% end %></h5>
-      <h5> <%= link_to tools_path(string: "martillo") do %>Martillos<% end %></h5>
-      <h5> <%= link_to tools_path(string: "motosierra") do %>Motosierra<% end %></h5>
-      <div style="display:none;" id="myCatDiv">
-        <h5> <%= link_to tools_path(string: "sierra") do %>Sierra<% end %></h5>
-        <h5> <%= link_to tools_path(string: "taladro") do %>Taladros<% end %></h5>
-      </div>
+    <h5> <%= link_to tools_path(string: "amoladora") do %>Amoladora<% end %></h5>
+    <h5> <%= link_to tools_path(string: "grupo electrogeno") do %>Grupo electrogeno<% end %></h5>
+    <h5> <%= link_to tools_path(string: "martillo") do %>Martillos<% end %></h5>
+    <h5> <%= link_to tools_path(string: "motosierra") do %>Motosierra<% end %></h5>
+    <div style="display:none;" id="myCatDiv">
+      <h5> <%= link_to tools_path(string: "sierra") do %>Sierra<% end %></h5>
+      <h5> <%= link_to tools_path(string: "taladro") do %>Taladros<% end %></h5>
+    </div>
     <button id="myCatButton" onClick="myCatFunction(); toggleCatText(this.id);">+ Mas</button>
 
     <script>
       function myCatFunction() {
-            var x = document.getElementById("myCatDiv");
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-            }
+        var x = document.getElementById("myCatDiv");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
 
-          }
-            function toggleCatText(button_id)  {
-             if (document.getElementById(button_id).innerText == "+ Mas")
-             {
-                 document.getElementById(button_id).innerText = "- Menos";
-             }
-             else
-             {
-               document.getElementById(button_id).innerText = "+ Mas";
-             }
-          }
-    </script>
+      }
+      function toggleCatText(button_id)  {
+       if (document.getElementById(button_id).innerText == "+ Mas")
+       {
+         document.getElementById(button_id).innerText = "- Menos";
+       }
+       else
+       {
+         document.getElementById(button_id).innerText = "+ Mas";
+       }
+     }
+   </script>
 
-    <h4><button id="myMarcaButton" onClick="myMarcaFunction(); toggleMarcaText(this.id);">Marcas -</button></h4>
-    <div id = "marcasDiv">
-        <h5><%= link_to tools_path(brand: "Black_decker") do %>Black-decker<% end %></h5>
-        <h5><%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
-        <h5><%= link_to tools_path(brand: "Dewalt") do %>Dewalt<% end %></h5>
-        <h5><%= link_to tools_path(brand: "Hyundai") do %>Hyundai<% end %></h5>
+   <h4><button id="myMarcaButton" onClick="myMarcaFunction(); toggleMarcaText(this.id);">Marcas -</button></h4>
+   <div id = "marcasDiv">
+    <h5><%= link_to tools_path(brand: "Black_decker") do %>Black-decker<% end %></h5>
+    <h5><%= link_to tools_path(brand: "Bosch") do %>Bosch<% end %></h5>
+    <h5><%= link_to tools_path(brand: "Dewalt") do %>Dewalt<% end %></h5>
+    <h5><%= link_to tools_path(brand: "Hyundai") do %>Hyundai<% end %></h5>
 
-        <div style="display:none;" id="myDIV">
-          <h5><%= link_to tools_path(brand: "Lusqtoff") do %>Lusqtoff<% end %></h5>
-          <h5><%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
-          <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
-          <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
-        </div>
-        <button id="myButton" onClick="myFunction(); toggleText(this.id);">+ Mas</button>
-      </div>
-        <script>
+    <div style="display:none;" id="myDIV">
+      <h5><%= link_to tools_path(brand: "Lusqtoff") do %>Lusqtoff<% end %></h5>
+      <h5><%= link_to tools_path(brand: "Makita") do %>Makita<% end %></h5>
+      <h5><%= link_to tools_path(brand: "Stanley") do %>Stanley<% end %></h5>
+      <h5><%= link_to tools_path(brand: "Stihl") do %>Stihl<% end %></h5>
+    </div>
+    <button id="myButton" onClick="myFunction(); toggleText(this.id);">+ Mas</button>
+  </div>
+  <script>
 
-           function myMarcaFunction() {
-            let b = document.getElementById("marcasDiv");
-            if (b.style.display === "none")
-            {
-              b.style.display = "block";
-            } else {
-              b.style.display = "none";
-            }
-           }
+   function myMarcaFunction() {
+    let b = document.getElementById("marcasDiv");
+    if (b.style.display === "none")
+    {
+      b.style.display = "block";
+    } else {
+      b.style.display = "none";
+    }
+  }
 
-           function toggleMarcaText(marcaButton) {
+  function toggleMarcaText(marcaButton) {
 
-            if (document.getElementById(marcaButton).innerText == "Marcas -")
-             {
-                 document.getElementById(marcaButton).innerText = "Marcas +";
-             }
-             else
-             {
-               document.getElementById(marcaButton).innerText = "Marcas -";
-             }
+    if (document.getElementById(marcaButton).innerText == "Marcas -")
+    {
+     document.getElementById(marcaButton).innerText = "Marcas +";
+   }
+   else
+   {
+     document.getElementById(marcaButton).innerText = "Marcas -";
+   }
 
-           }
+ }
 
 
-            function myFunction() {
-            var x = document.getElementById("myDIV");
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-            }
+ function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 
-          }
-            function toggleText(button_id)  {
-             if (document.getElementById(button_id).innerText == "+ Mas")
-             {
-                 document.getElementById(button_id).innerText = "- Menos";
-             }
-             else
-             {
-               document.getElementById(button_id).innerText = "+ Mas";
-             }
-          }
-        </script>
+}
+function toggleText(button_id)  {
+ if (document.getElementById(button_id).innerText == "+ Mas")
+ {
+   document.getElementById(button_id).innerText = "- Menos";
+ }
+ else
+ {
+   document.getElementById(button_id).innerText = "+ Mas";
+ }
+}
+</script>
 
-    <h4> <button id="myPriceButton" onClick="myPriceFunction(); togglePrice(this.id);">Precio -</button> </h4>
-    <div  id="myPrice">
-      <h5> <%= link_to tools_path(min_price_cents: 1, max_price_cents: 300001) do %>
-      <i class="fas fa-minus"></i> 3.000 $<% end %> </h5>
-      <h5><%= link_to "3.000-6.000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
-      <h5><%= link_to "6.000-10.000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
-      <h5> <%= link_to tools_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
+<h4> <button id="myPriceButton" onClick="myPriceFunction(); togglePrice(this.id);">Precio -</button> </h4>
+<div  id="myPrice">
+  <h5> <%= link_to tools_path(min_price_cents: 1, max_price_cents: 300001) do %>
+    <i class="fas fa-minus"></i> 3.000 $<% end %> </h5>
+    <h5><%= link_to "3.000-6.000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
+    <h5><%= link_to "6.000-10.000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
+    <h5> <%= link_to tools_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
       <i class="fas fa-plus"></i> 10.000 $<% end %> </h5>
     </div>
 
-     <script>
-            function myPriceFunction() {
-            var x = document.getElementById("myPrice");
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-            }
+    <script>
+      function myPriceFunction() {
+        var x = document.getElementById("myPrice");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
 
-          }
-            function togglePrice(myPriceButton)  {
-             if (document.getElementById(myPriceButton).innerText == "Precio -")
-             {
-                 document.getElementById(myPriceButton).innerText = "Precio +";
-             }
-             else
-             {
-               document.getElementById(myPriceButton).innerText = "Precio -";
-             }
-          }
-        </script>
+      }
+      function togglePrice(myPriceButton)  {
+       if (document.getElementById(myPriceButton).innerText == "Precio -")
+       {
+         document.getElementById(myPriceButton).innerText = "Precio +";
+       }
+       else
+       {
+         document.getElementById(myPriceButton).innerText = "Precio -";
+       }
+     }
+   </script>
 
-     <h4> <button id="myOrderButton" onClick="myOrderFunction(); toggleOrder(this.id);">Ordenar -</button> </h4>
-     <div  id="myOrder">
-       <h5><%= link_to tools_path(created_at: :desc) do %>Lo mas reciente<% end %></h5>
-       <h5>  <%= link_to tools_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
+   <h4> <button id="myOrderButton" onClick="myOrderFunction(); toggleOrder(this.id);">Ordenar -</button> </h4>
+   <div  id="myOrder">
+     <h5><%= link_to tools_path(created_at: :desc) do %>Lo mas reciente<% end %></h5>
+     <h5>  <%= link_to tools_path(price_cents: :desc) do %>mas alto - mas bajo<% end %></h5>
+   </div>
+   <script>
+    function myOrderFunction() {
+      var x = document.getElementById("myOrder");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+
+    }
+    function toggleOrder(myOrderButton)  {
+     if (document.getElementById(myOrderButton).innerText == "Ordenar -")
+     {
+       document.getElementById(myOrderButton).innerText = "Ordenar +";
+     }
+     else
+     {
+       document.getElementById(myOrderButton).innerText = "Ordenar -";
+     }
+   }
+ </script>
+
+</div>
+
+<div class="container">
+  <div class="row">
+   <br>
+   <br>
+   <% @tools.each do |tool| %>
+   <div class="col-xs-12 col-sm-4 col-md-3">
+     <%= link_to tool_path(tool) do %>
+     <div class="tool-card">
+      <div class="thumbnail-tool" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url( '<%= tool.photo_url %> ')">
+      </div>
+      <div class="caption-tool">
+        <h5><%= link_to truncate(tool.name, lenght: 10), tool_path(tool) %></h5>
+      </div>
+      <div class="caption-b">
+
+        <h5>  <% tool.average.times do %>
+         <i class="fas fa-star"></i>
+         <% end %>
+         <% (5 - tool.average).times do %>
+         <i class="far fa-star"></i>
+         <% end %>( <%= tool.reviews.size %> )</h5>
+         <p> <i class="fas fa-truck-moving"></i> Envio gratis a todo el pais </p>
+
+         <h4><%= tool.brand %></h4>
+         <h4><%= humanized_money_with_symbol(tool.price) %></h4>
+       </div>
      </div>
-      <script>
-            function myOrderFunction() {
-            var x = document.getElementById("myOrder");
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-            }
-
-          }
-            function toggleOrder(myOrderButton)  {
-             if (document.getElementById(myOrderButton).innerText == "Ordenar -")
-             {
-                 document.getElementById(myOrderButton).innerText = "Ordenar +";
-             }
-             else
-             {
-               document.getElementById(myOrderButton).innerText = "Ordenar -";
-             }
-          }
-        </script>
-
-  </div>
-
-  <div class="container">
-    <div class="row">
-       <br>
-       <br>
-      <% @tools.each do |tool| %>
-        <div class="col-xs-12 col-sm-4 col-md-3">
-           <%= link_to tool_path(tool) do %>
-            <div class="tool-card">
-              <div class="thumbnail-tool" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url( '<%= tool.photo_url %> ')">
-              </div>
-              <div class="caption-tool">
-                <h5><%= link_to truncate(tool.name, lenght: 10), tool_path(tool) %></h5>
-                </div>
-                <div class="caption-b">
-
-                  <h5>  <% tool.average.times do %>
-                 <i class="fas fa-star"></i>
-                 <% end %>
-                 <% (5 - tool.average).times do %>
-                 <i class="far fa-star"></i>
-                 <% end %>( <%= tool.reviews.size %> )</h5>
-                <p> <i class="fas fa-truck-moving"></i> Envio gratis a todo el pais </p>
-
-                <h4><%= tool.brand %></h4>
-                <h4><%= humanized_money_with_symbol(tool.price) %></h4>
-              </div>
-            </div>
-            <% end %>
-          </div>
-          <% end %>
-    </div>
-  </div>
+     <% end %>
+   </div>
+   <% end %>
+ </div>
+</div>
 </div>

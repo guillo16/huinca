@@ -8,5 +8,7 @@ class OrdersController < ApplicationController
 
   def payment
     @order = Order.find(params['order_id'])
+    @order.state = 'confirmada'
+    @order.save
   end
 end

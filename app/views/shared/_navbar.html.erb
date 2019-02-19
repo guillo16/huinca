@@ -54,9 +54,6 @@
           <button class="dropbtn">
           <%= image_tag "hammer-solid.svg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %> </button>
             <div class="dropdown-content">
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="fas fa-sign-out-alt"></i> <%= t(".sign_out", default: "Log out") %>
               <% end %>
