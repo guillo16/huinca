@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  post 'procesar-pago', to: "orders#payment"
   resources :tools, only: [:index, :show] do
     resources :reviews, only: :create
   end

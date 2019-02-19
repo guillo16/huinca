@@ -3,13 +3,9 @@
   <%= link_to tools_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logohuinca.png", height: 50 %>
   <% end %>
-
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-
-
-      <!-- Links when logged in -->
+  <!-- Links when logged in -->
         <div class="dropdown">
           <button class="dropbtn">Categorias <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
@@ -37,11 +33,11 @@
           <button class="dropbtn">Precio <i class="fas fa-angle-down"></i></button>
           <div class="dropdown-content">
               <h5> <%= link_to tools_path(min_price_cents: 1, max_price_cents: 300001) do %>
-              <i class="fas fa-minus"></i> 3000 $<% end %> </h5>
-              <h5><%= link_to "3000-6000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
-              <h5><%= link_to "6000-10000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
+              <i class="fas fa-minus"></i> 3.000 $<% end %> </h5>
+              <h5><%= link_to "3.000-6.000 $", tools_path(min_price_cents: 300001, max_price_cents: 600000) %> </h5>
+              <h5><%= link_to "6.000-10.000 $", tools_path(min_price_cents: 600001, max_price_cents: 1000000) %></h5>
               <h5> <%= link_to tools_path(min_price_cents: 1000001, max_price_cents: 10000000) do %>
-              <i class="fas fa-plus"></i> 10000 $<% end %> </h5>
+              <i class="fas fa-plus"></i> 10.000 $<% end %> </h5>
           </div>
         </div>
         <div class="dropdown">
@@ -51,10 +47,7 @@
             <h5>  <%= link_to tools_path(price_cents: :desc) do %>Mas alto - Mas bajo<% end %></h5>
           </div>
         </div>
-
-
-
-      <!-- Avatar with dropdown menu -->
+  <!-- Avatar with dropdown menu -->
       <% if user_signed_in? %>
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -71,11 +64,10 @@
         </div>
       </div>
     <% else %>
-      <!-- Login link (when logged out) -->
+  <!-- Login link (when logged out) -->
        <%= link_to t(".sign_in", default: "Iniciar Sesion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
-
   <!-- Dropdown list appearing on mobile only -->
   <% if user_signed_in? %>
   <div class="navbar-wagon-item hidden-md hidden-lg">
