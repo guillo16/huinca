@@ -1,15 +1,17 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
-gem 'bootsnap', require: false
+
+gem 'rails', '5.2.4.2'
+gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
-gem 'sassc-rails'
+gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
-gem 'rails', '5.2.4.2'
+
 gem 'redis'
 
 gem 'autoprefixer-rails'
